@@ -1,6 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'initialScreen.dart';
 
@@ -13,14 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       home: AnimatedSplashScreen(
         backgroundColor: Colors.deepOrange.shade900,
         splashIconSize: 200,
         splashTransition:SplashTransition.scaleTransition ,
         splash:'assets/images/car.png'
            ,
-        nextScreen:homepage() ,),
+        nextScreen:const homepage() ,),
     );
   }
 }

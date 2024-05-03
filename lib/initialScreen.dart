@@ -11,6 +11,7 @@ import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import 'Core/screens/home.dart';
 import 'Widgets/ActionButton.dart';
 
 class homepage extends StatefulWidget {
@@ -210,7 +211,7 @@ class _homepageState extends State<homepage> {
       trailing: TextButton(
         child: const Text('Go to controler',style: TextStyle(color: Colors.green),),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> ControlScreen()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
         },
       ),
       title: const Padding(
