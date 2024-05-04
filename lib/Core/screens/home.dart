@@ -7,6 +7,7 @@ import 'package:grasscuttercontroler/Core/screens/motion.dart';
 import '../../Services/Get/get_navigation.dart';
 import 'car.dart';
 import 'ARM.dart';
+import 'outonmusMode.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -58,7 +59,7 @@ class _HomeState extends State<Home> {
                   Car(),
                   ARM(),
                   motion(),
-                  ARM(),
+                  OutanmousMode(),
                 ],
               );
             },
