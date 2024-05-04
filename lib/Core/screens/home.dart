@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Services/Get/get_navigation.dart';
 import 'car.dart';
-import 'climate.dart';
+import 'ARM.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -55,9 +55,9 @@ class _HomeState extends State<Home> {
               return TabBarView(
                 children: [
                   Car(),
-                  Climate(),
+                  ARM(),
                   Car(),
-                  Climate(),
+                  ARM(),
                 ],
               );
             },
