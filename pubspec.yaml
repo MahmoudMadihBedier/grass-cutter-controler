@@ -42,6 +42,7 @@ dependencies:
   sleek_circular_slider: ^2.0.1
   get: ^4.6.5
   floating_frosted_bottom_bar: ^0.0.1
+  flutter_joystick: ^0.0.4
 
 
 dev_dependencies:

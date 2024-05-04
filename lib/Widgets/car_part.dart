@@ -21,8 +21,8 @@ class CarPart extends StatelessWidget {
               blurRadius: state ? 50 : 0,
             )
           ],
-          color: state ? Colors.red : Colors.black.withOpacity(.5),
-          borderRadius: BorderRadius.circular(20)),
+          color: state ? Colors.deepOrange.shade900 : Colors.black.withOpacity(.5),
+          borderRadius: BorderRadius.circular(30)),
       child: Row(
         children: [
           Column(
@@ -44,7 +44,7 @@ class CarPart extends StatelessWidget {
               scaleX: 1.5,
               scaleY: 1.5,
               child: Switch(
-                activeColor: Colors.deepOrange,
+                activeColor: Colors.deepOrange.shade900,
                 activeTrackColor: Colors.white,
                 inactiveTrackColor: Colors.white.withOpacity(.1),
                 value: state,

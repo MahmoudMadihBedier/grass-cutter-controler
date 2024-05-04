@@ -14,14 +14,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: AnimatedSplashScreen(
-        backgroundColor: Colors.deepOrange.shade900,
-        splashIconSize: 200,
-        splashTransition:SplashTransition.scaleTransition ,
-        splash:'assets/images/car.png'
-           ,
-        nextScreen:const homepage() ,),
+    return Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.deepOrange.shade900,
+                Colors.black,
+              ])),
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: AnimatedSplashScreen(
+           backgroundColor: Colors.transparent,
+          splashIconSize: 200,
+          splashTransition:SplashTransition.scaleTransition ,
+          splash:'assets/images/car.png'
+             ,
+          nextScreen:const homepage() ,),
+      ),
     );
   }
 }
