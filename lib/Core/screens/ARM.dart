@@ -165,7 +165,7 @@ class _ARMState extends State<ARM> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ListView(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   // child: Column(
                   //   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -176,14 +176,23 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Gripper catch',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                           ),
                         ),
-                        SliderWidget()
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                             double _gripperCatchValue = value;
+                             _sendData('_gripperCatchValue');
+                             print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -192,14 +201,23 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Gripper Rotation',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                           ),
                         ),
-                        SliderWidget(),
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                              double _gripperCatchValue = value;
+                              _sendData('_gripperCatchValue');
+                              print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -208,12 +226,21 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Arm link1',style:
+                        const Text('Arm link1',style:
                         TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                         ),),
-                        SliderWidget(),
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                              double _gripperCatchValue = value;
+                              _sendData('_gripperCatchValue');
+                              print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -222,12 +249,21 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Arm link2',style:
+                        const Text('Arm link2',style:
                         TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                         ),),
-                        SliderWidget(),
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                              double _gripperCatchValue = value;
+                              _sendData('_gripperCatchValue');
+                              print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -236,12 +272,21 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Arm link3',style:
+                        const Text('Arm link3',style:
                         TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                         ),),
-                        SliderWidget(),
+                      SliderWidget(
+                           // Pass the callback to receive the slider value
+                             onValueChanged: (value) {
+                           setState(() {
+                          double _gripperCatchValue = value;
+                          _sendData('_gripperCatchValue');
+                          print(_gripperCatchValue);
+                    });
+                  },
+                ),
                       ],
                     ),
                     const SizedBox(
@@ -250,12 +295,21 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Arm link3',style:
+                        const Text('Arm link3',style:
                         TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                         ),),
-                        SliderWidget(),
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                              double _gripperCatchValue = value;
+                              _sendData('_gripperCatchValue');
+                              print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -264,12 +318,21 @@ class _ARMState extends State<ARM> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Base motion',style:
+                        const Text('Base motion',style:
                         TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                         ),),
-                        SliderWidget(),
+                        SliderWidget(
+                          // Pass the callback to receive the slider value
+                          onValueChanged: (value) {
+                            setState(() {
+                              double _gripperCatchValue = value;
+                              _sendData('_gripperCatchValue');
+                              print(_gripperCatchValue);
+                            });
+                          },
+                        ),
                       ],
                     ),
                 const SizedBox(

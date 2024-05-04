@@ -1,25 +1,25 @@
-
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:flutter_joystick/flutter_joystick.dart';
 import 'package:get/get.dart';
+import 'package:grasscuttercontroler/Services/Get/joysticks.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../../Services/Get/get_car.dart';
 import '../../Widgets/car_part.dart';
 import '../../Widgets/text_widget.dart';
 
-class Car extends StatefulWidget {
-  Car({super.key});
+class motion extends StatefulWidget {
+  motion({super.key});
 
   @override
-  State<Car> createState() => _CarState();
+  State<motion> createState() => _motionState();
 }
 
-class _CarState extends State<Car> {
-  final GetCar controller = Get.put(GetCar());
-
+class _motionState extends State<motion> {
   final _bluetooth = FlutterBluetoothSerial.instance;
 
   bool _bluetoothState = false;
@@ -78,10 +78,10 @@ class _CarState extends State<Car> {
         case BluetoothState.STATE_ON:
           setState(() => _bluetoothState = true);
           break;
-      // case BluetoothState.STATE_TURNING_OFF:
-      //   break;
-      // case BluetoothState.STATE_TURNING_ON:
-      //   break;
+        // case BluetoothState.STATE_TURNING_OFF:
+        //   break;
+        // case BluetoothState.STATE_TURNING_ON:
+        //   break;
       }
     });
   }
@@ -140,15 +140,15 @@ class _CarState extends State<Car> {
                                   shape: BoxShape.circle,
                                   color: Colors.white10,
                                 ),
-                                child:  Center(
+                                child: Center(
                                   child: IconButton(
                                     icon: const Icon(
                                       Icons.horizontal_distribute,
                                       color: Colors.white,
                                     ),
-                                      onPressed:(){
+                                    onPressed: () {
                                       _sendData(' Horn  Parameter');
-                                      },
+                                    },
                                   ),
                                 ),
                               ),
@@ -169,45 +169,26 @@ class _CarState extends State<Car> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text("CONTROLS", 30, Colors.white, FontWeight.bold),
+                      text(
+                        "MOTION CONTROLS",
+                        30,
+                        Colors.white,
+                        FontWeight.bold,
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Obx(
-                            () => CarPart(name: "Engine",state: controller.engin.value,
-                               onTap: () => controller.setEngine()),
-                          ),
-                          Obx(
-                            () => CarPart(name: "sensor",state:  controller.sensor.value,
-                               onTap:  () => controller.setsensor()),
-                          )
-                        ],
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        alignment: Alignment.center,
+                        child: Joystick(
+                          listener: (details) {
+                            // Do something with the joystick details (e.g., print coordinates)
+                            print('Offset: X: ${details.x}, Y: ${details.y}');
+                          },
+                        ),
                       ),
-
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Obx(
-                            () => CarPart(name: "Arm",state:  controller.arm.value,
-                               onTap:  () => controller.setarm()),
-                          ),
-                          Obx(
-                            () => CarPart(name: "Cutter",state:  controller.cutter.value,
-                               onTap:  () => controller.setcutter()),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 40,
-                      )
                     ],
-
                   ),
                 ))
           ],

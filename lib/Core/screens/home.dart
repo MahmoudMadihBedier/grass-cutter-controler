@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:floating_frosted_bottom_bar/app/frosted_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:grasscuttercontroler/Core/screens/motion.dart';
 import '../../Services/Get/get_navigation.dart';
 import 'car.dart';
 import 'ARM.dart';
@@ -46,8 +47,8 @@ class _HomeState extends State<Home> {
                         controller.index.value == 1, Icons.control_camera),
                   ),
                   Obx(() => tabItem(controller.index.value == 2,
-                      Icons.notification_add_outlined)),
-                  Obx(() => tabItem(controller.index.value == 3, Icons.person))
+                      Icons.motion_photos_on_sharp)),
+                  Obx(() => tabItem(controller.index.value == 3, Icons.motion_photos_auto))
                 ],
               ),
             ),
@@ -56,7 +57,7 @@ class _HomeState extends State<Home> {
                 children: [
                   Car(),
                   ARM(),
-                  Car(),
+                  motion(),
                   ARM(),
                 ],
               );
