@@ -1,6 +1,16 @@
 # grass cutter controller
 
 AFlutter project.
+## flutter details 
+- Animated Splash Screen .
+
+- Responsive UI📱💻.
+
+- MVVM Architecture🏛️:" follows the Model-View-ViewModel (MVVM) architecture, ensuring a clean and organized code structure, making it easier to maintain and update the app in the future.
+
+- State Management : The app utilizes the Provider package for efficient state management, enabling seamless data flow and synchronization between different components.
+- GetX
+- 
 
 ## Getting Started
 
