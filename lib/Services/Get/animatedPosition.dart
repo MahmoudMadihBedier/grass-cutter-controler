@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
@@ -119,101 +120,39 @@ class _ClimateState extends State<Climate> {
                 },
               ),),
               const Spacer(),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.grey.shade900,
-                height: 250,
-                width: double.infinity,
-                child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            ElevatedButton(onPressed: (){}, child:Text('catch 1')),
-                            ElevatedButton(onPressed: (){}, child:Text('catch 2'))
-                          ],
-                        ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                text('Automatic Grass Cutting', 18,
-                                  Colors.white,
-                                  FontWeight.bold,
-                                  letterspacel: 6,)
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                TextField(
-                                  keyboardType: TextInputType.number,
-                                  textAlign: TextAlign.center,
-                                  onChanged: (value){
-                                    //send data
-                                  },
-                                  decoration: InputDecoration(
-                                    hintText: 'enter the length'
-                                  ),
-                                )
+                   Positioned(
+                     top: 320,
+                     left: 0,
+                     bottom: 80,
+                     right: 0,
+                     child: Container(
+                       padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
+                       width: double.infinity, // Ensures full width
+                       height: 500.0, // Set a specific height
+                       decoration: const BoxDecoration(
+                         color: Colors.grey,
+                         borderRadius: BorderRadius.only(
+                           topLeft: Radius.circular(30),
+                           topRight: Radius.circular(30),
+                         ),
+                       ),
+                       child: SingleChildScrollView(
+                         // Wrap the Column with SingleChildScrollView for scrolling
+                         child: Column(
+                         //  crossAxisAlignment: CrossAxisAlignment.start,
+                           children: [
 
-                              ],
-                            )
-                            // Obx(() => Container(
-                            //   padding: const EdgeInsets.only(right: 20),
-                            //   height: 120,
-                            //   width: double.infinity,
-                            //   decoration: BoxDecoration(
-                            //       boxShadow: [
-                            //         BoxShadow(
-                            //           color: controller.ac.value
-                            //               ? Colors.blue
-                            //               : Colors.blue.shade900.withOpacity(.1),
-                            //           blurRadius: controller.ac.value ? 40 : 0,
-                            //         )
-                            //       ],
-                            //       borderRadius: BorderRadius.circular(15),
-                            //       color:
-                            //       controller.ac.value
-                            //           ? Colors.blue
-                            //           : Colors.blue.shade900.withOpacity(.1)),
-                            //   child: Row(
-                            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //     crossAxisAlignment: CrossAxisAlignment.center,
-                            //     children: [
-                            //       Column(
-                            //         mainAxisAlignment: MainAxisAlignment.center,
-                            //         children: [
-                            //           text(controller.ac.value ? "AC is on" : "AC is off", 25, Colors.white,
-                            //               FontWeight.bold),
-                            //           const SizedBox(
-                            //             height: 10,
-                            //           ),
-                            //           text("   Currently ${controller.value.value.ceil()} C", 18,
-                            //               Colors.white.withOpacity(.5), FontWeight.bold)
-                            //         ],
-                            //       ),
-                            //       Transform.scale(
-                            //         scale: 1.5,
-                            //         child: Switch(
-                            //           activeTrackColor: Colors.blue.shade900,
-                            //           activeColor: Colors.blue,
-                            //           value: controller.ac.value,
-                            //           onChanged: (value) => controller.setAc(),
-                            //         ),
-                            //       )
-                            //     ],
-                            //   ),
-                            // )),
-                          ,
-                     ],
-                ),
-
-              ),
+                             // Add your content here, ensuring they have appropriate sizing
+                             // (e.g., limited height for Text widgets)
+                           ],
+                         ),
+                       ),
+                     ),
+                   ),
 
 
 
-              const Spacer(),
-            ],
+                 ],
           ),
         ),
       ]),
