@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../Services/Get/animatedPosition.dart';
+import '../../Widgets/MatiralButton.dart';
+import 'outomatic.dart';
 import '../../Widgets/text_widget.dart';
 
 class OutanmousMode extends StatefulWidget {
@@ -94,10 +95,11 @@ class _OutanmousModeState extends State<OutanmousMode> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       text(
-                        "let autonomous take \n  CONTROLS",
+                        "let autonomous mode \n  take CONTROLS",
                         30,
                         Colors.white,
                         FontWeight.bold,
@@ -108,20 +110,18 @@ class _OutanmousModeState extends State<OutanmousMode> {
 
                       Container(
                         padding: EdgeInsets.all(40),
-                        child: ElevatedButton(
-                          onPressed: () {
+                        child: regsterButton(
+                          color: Color(0xff000000),
+                          title:" Lets go ",
+
+                          onprassed: () {
                             Navigator.push(context, 
                             MaterialPageRoute(
-                                builder: (context)=>Climate())
+                                builder: (context)=>outomatic())
                             );
 
                           },
-                          child: text(
-                            "lets go ",
-                            30,
-                            Colors.white,
-                            FontWeight.bold,
-                          ),
+
                         ),
 
                       ),
