@@ -12,8 +12,8 @@ class CarPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 10),
-      height: 150,
-      width: 180,
+      height: 100,
+      width: 320,
       decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -39,11 +39,13 @@ class CarPart extends StatelessWidget {
           ),
           const Spacer(),
           Transform.rotate(
-            angle: -1.6,
+            alignment: Alignment.centerRight,
+            angle: 0,
             child: Transform.scale(
               scaleX: 1.5,
               scaleY: 1.5,
               child: Switch(
+
                 activeColor: Colors.deepOrange.shade900,
                 activeTrackColor: Colors.white,
                 inactiveTrackColor: Colors.white.withOpacity(.1),
