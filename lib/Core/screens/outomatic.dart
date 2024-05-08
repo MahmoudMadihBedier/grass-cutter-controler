@@ -155,23 +155,27 @@ class _outomaticState extends State<outomatic> {
                     circleButton(
                         Icons.autorenew, "Home",
                         controller.auto.value, () {
+                          _sendData('AT HM');
                           print('1');
 
                     }),
                     circleButton(Icons.open_in_full_outlined, "open G",
                         controller.cool.value, () {
+                          _sendData('AT GO');
 
                           print('1');
 
                         }),
                     circleButton(Icons.close_fullscreen_outlined, "close G",
                         controller.fan.value, () {
+                          _sendData('AT GC');
                           print('1');
 
                         }),
                     circleButton(
                         Icons.upload, "Load",
                         controller.heat.value, () {
+                      _sendData('AT L1');
 
                       print('1');
 
@@ -210,11 +214,12 @@ class _outomaticState extends State<outomatic> {
                     angleRange: 180,
                   ),
                   initialValue: controller.value.value,
-                  max: 100,
-                  min: 0.0,
+                  max: 170,
+                  min: 10,
                   onChange: (value) async {
                   double rotat =value ;
                   print(value);
+                  _sendData('SR BS $rotat');
                   },
                 ),),
             const Spacer(),
@@ -251,12 +256,14 @@ class _outomaticState extends State<outomatic> {
                               Icons.catching_pokemon_outlined, "catch1", controller.auto.value,
                                   () {
                                 print('1');
+                                _sendData('AT C1');
 
                           }),
                           circleButton(Icons.catching_pokemon_outlined, "catch2",
                               controller.cool.value,
                                   () {
                                     print('1');
+                                    _sendData('AT C2');
                               }),
                         ],
                       ),

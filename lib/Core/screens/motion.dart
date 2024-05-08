@@ -182,6 +182,9 @@ class _motionState extends State<motion> {
                         padding: EdgeInsets.all(20),
                         alignment: Alignment.center,
                         child: Joystick(
+
+
+
                           listener: (details) {
                             // Do something with the joystick details (e.g., print coordinates)
                             print('Offset: X: ${details.x}, Y: ${details.y}');
