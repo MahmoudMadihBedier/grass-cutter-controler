@@ -14,34 +14,45 @@ AFlutter project.
 
 ## Getting Started
 
-about this project it is part of graduation project that work as mobile controller that connect with bluetooth and send requests by the arduino mega to control of the vehicle
+This project is part of a graduation project that works as a mobile controller that connects with Bluetooth and sends requests by the Arduino Mega to control a vehicle.
 
+## Screenshots
 
-
-## splash screen
-![WhatsApp Image 2024-05-05 at 11 22 10 PM](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/1638669c-b535-4f60-9dd7-444a1decf10e)
-
-## initial screen to connect Blurtooth 
-![WhatsApp Image 2024-05-05 at 11 22 11 PM](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/af8266d0-df07-4807-a4b7-87401e6e072b)
-
-## the home screen to connect the main parts of project
-![WhatsApp Image 2024-05-05 at 11 22 11 PM (1)](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/fb6e4e89-1c60-4d08-ab58-14d5afdfdcee)
-
-## the manual control of the arm 
-![WhatsApp Image 2024-05-05 at 11 22 11 PM (2)](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/4246b3b2-506f-42b3-a94c-3dd2587a6019)
-
-## the control motion 
-![WhatsApp Image 2024-05-05 at 11 22 12 PM](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/3b36b1a7-5abe-40b5-ad84-0a10251d03f6)
-
-
-## the autonmouse mode control
-![image](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/0b8fd51e-a4e9-409e-9783-36a0a945e062)
-
-
-
-![WhatsApp Image 2024-05-05 at 11 22 13 PM](https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/b28e027c-7d94-4185-8cd6-6e6a0b29af05)
+<table>
+  <tr>
+    <th>Splash Screen</th>
+    <th>Initial Screen</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/1638669c-b535-4f60-9dd7-444a1decf10e" alt="Splash Screen"></td>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/af8266d0-df07-4807-a4b7-87401e6e072b" alt="Initial Screen"></td>
+  </tr>
+  <tr>
+    <th>Home Screen</th>
+    <th>Manual Control</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/fb6e4e89-1c60-4d08-ab58-14d5afdfdcee" alt="Home Screen"></td>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/4246b3b2-506f-42b3-a94c-3dd2587a6019" alt="Manual Control"></td>
+  </tr>
+  <tr>
+    <th>Control Motion</th>
+    <th>Autonomous Mode Control</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/3b36b1a7-5abe-40b5-ad84-0a10251d03f6" alt="Control Motion"></td>
+    <td><img src="https://github.com/MahmoudMadihBedier/grass-cutter-controler/assets/166904135/0b8fd51e-a4e9-409e-9783-36a0a945e062" alt="Autonomous Mode Control"></td>
+  </tr>
+</table>
 
 
 For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<h3> 🤝🏻 &nbsp;Connect with Me </h3>
+
+<p align="center">
+<a href="https://www.linkedin.com/in/mahmoud-madih-762358301/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Mahmoud%20Madih-blue?style=flat-square&logo=linkedin"></a>
+<a href="https://www.instagram.com/m__madih?igsh=a2c0Nmk5cnQ3cHo1"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-m__madih-blue?style=flat-square&logo=instagram"></a>
+<a href="moodbeder150@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-moodbeder150@gmail.com-blue?style=flat-square&logo=gmail"></a>
+</p>
+

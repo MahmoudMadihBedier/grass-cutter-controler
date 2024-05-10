@@ -147,7 +147,9 @@ class _CarState extends State<Car> {
                                       color: Colors.white,
                                     ),
                                       onPressed:(){
-                                      _sendData(' Horn  Parameter');
+                                      print('0000000');
+
+                                      _sendData('MF BZ');
                                       },
                                   ),
                                 ),
@@ -167,6 +169,7 @@ class _CarState extends State<Car> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       text("CONTROLS", 30, Colors.white, FontWeight.bold),
@@ -174,12 +177,13 @@ class _CarState extends State<Car> {
                         height: 20,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         mainAxisAlignment: MainAxisAlignment.center,
+                         // crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Obx(
-                            () => CarPart(name: "Engine",state: controller.engin.value,
-                               onTap: () => controller.setEngine()),
-                          ),
+                          // Obx(
+                          //   () => CarPart(name: "Engine",state: controller.engin.value,
+                          //      onTap: () => controller.setEngine()),
+                          // ),
                           Obx(
                             () => CarPart(name: "sensor",state:  controller.sensor.value,
                                onTap:  () => controller.setsensor()),
@@ -191,20 +195,21 @@ class _CarState extends State<Car> {
                         height: 10,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         mainAxisAlignment: MainAxisAlignment.center,
+                        // crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Obx(
-                            () => CarPart(name: "Arm",state:  controller.arm.value,
-                               onTap:  () => controller.setarm()),
-                          ),
+                          // Obx(
+                          //   () => CarPart(name: "Arm",state:  controller.arm.value,
+                          //      onTap:  () => controller.setarm()),
+                          // ),
                           Obx(
                             () => CarPart(name: "Cutter",state:  controller.cutter.value,
                                onTap:  () => controller.setcutter()),
                           )
                         ],
                       ),
-                      const SizedBox(
-                        height: 40,
+                       SizedBox(
+                        height: 50,
                       )
                     ],
 
