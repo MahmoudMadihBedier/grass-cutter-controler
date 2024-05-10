@@ -78,10 +78,10 @@ class _CarState extends State<Car> {
         case BluetoothState.STATE_ON:
           setState(() => _bluetoothState = true);
           break;
-      // case BluetoothState.STATE_TURNING_OFF:
-      //   break;
-      // case BluetoothState.STATE_TURNING_ON:
-      //   break;
+      case BluetoothState.STATE_TURNING_OFF:
+        break;
+      case BluetoothState.STATE_TURNING_ON:
+        break;
       }
     });
   }
