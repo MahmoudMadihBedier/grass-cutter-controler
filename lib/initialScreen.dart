@@ -74,10 +74,10 @@ class _homepageState extends State<homepage> {
         case BluetoothState.STATE_ON:
           setState(() => _bluetoothState = true);
           break;
-        // case BluetoothState.STATE_TURNING_OFF:
-        //   break;
-        // case BluetoothState.STATE_TURNING_ON:
-        //   break;
+        case BluetoothState.STATE_TURNING_OFF:
+          break;
+        case BluetoothState.STATE_TURNING_ON:
+          break;
       }
     });
   }
@@ -211,7 +211,11 @@ class _homepageState extends State<homepage> {
       trailing: TextButton(
         child: const Text('Go to controler',style: TextStyle(color: Colors.green),),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
+          Navigator.push
+            (
+              context,
+              MaterialPageRoute
+                (builder: (context)=> Home()));
         },
       ),
       title: const Padding(
