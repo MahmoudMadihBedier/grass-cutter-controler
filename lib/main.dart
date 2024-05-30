@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           splashTransition:SplashTransition.scaleTransition ,
           splash:'assets/images/car.png'
              ,
-          nextScreen:const homepage() ,),
+          nextScreen: homepage() ,),
       ),
     );
   }
